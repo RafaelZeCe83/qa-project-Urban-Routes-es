@@ -124,6 +124,29 @@ Ej:
 
 pytest main.py
 
+___________________________________________________________________
+
+Por último, una vez finalizado seguimos los siguientes pasos para enviar nuestros archivos o repositorio a GitHub:
+
+
+En Gitbash con la ruta de ubicación del proyecto:
+
+cd “C:\Users\Spartan83\projects\qa-project-Urban-Routes-es-main”
+
+Seguir los siguientes pasos:
+
+-	git init
+-	git status
+-	git add –all
+-	git commit -m "Archivos ProSp8 1era revisión(edit)"
+-	git remote add origin git@github.com:RafaelZeCe83/qa-project-Urban-Routes-es-main.git
+-	git push -u origin master (en mi caso es master NO main)
+
+
+
+comprobar en la página de GitHub
+
+
 
 
 
