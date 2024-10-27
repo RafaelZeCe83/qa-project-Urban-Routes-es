@@ -144,7 +144,7 @@ Seguir los siguientes pasos:
 
 
 
-comprobar en la página de GitHub
+comprobar en la página de GitHub.
 
 
 
