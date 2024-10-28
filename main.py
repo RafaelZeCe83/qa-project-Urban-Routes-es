@@ -47,29 +47,25 @@ class TestUrbanRoutes:
         assert comfort_rate_text == 'Comfort'
 
     # --------------------------   Test 4: "Numero de telefono y codigo sms"   --------------------------
-    def test_phone_number(self):
+    def test_phone_number_and_sms_code(self):
         self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_phone_number_button()
         self.routes_page.put_phone_number_field()
         self.phone_number = data.phone_number
         phone_number = self.routes_page.get_phone_number()
         assert phone_number == data.phone_number
-    def test_phone_click_next_button(self):
-        self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_next_button()
         next_button_type = self.routes_page.get_next_button_type()
         assert next_button_type == 'submit'
-    def test_sms_code_and_confirm_phone_number(self):
-        self.routes_page = UrbanRoutesPage(self.driver)
+        #self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_sms_code_field()
         self.routes_page.set_sms_code()
-        self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_confirm_button()
         text_phone_number_button = self.routes_page.get_phone_number_button_text()
         assert text_phone_number_button == '+1 123 123 12 12'
 
     # ----------------------------------   Test 5: "Metodo de pago"   -----------------------------------
-    def test_payment_method_card_number(self):
+    def test_payment_method_card_number_and_card_code(self):
         self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_payment_method_button()
         self.routes_page.click_add_card_button()
@@ -77,13 +73,9 @@ class TestUrbanRoutes:
         self.routes_page.card_number_field()
         card_number = self.routes_page.get_card_number()
         assert card_number == data.card_number
-    def test_payment_method_card_code(self):
-        self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.code_field()
         card_code = self.routes_page.get_card_code()
         assert card_code == data.card_code
-    def test_close_and_verify_payment_method_change(self):
-        self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_change_focus()
         self.routes_page.click_add_button()
         self.routes_page.click_close_button()
@@ -112,7 +104,7 @@ class TestUrbanRoutes:
         quantity_ice_cream = self.routes_page.get_quantity_ice_cream()
         assert quantity_ice_cream == '2'
 
-    # ------------------------------------- Test 9: Solicitar taxi   ------------------------------------
+    # ------------------------------------- Test 9: Solicitar taxi y ventana emergente   ------------------------------------
     def test_order_taxi_and_pop_up_window_search_car(self):
         self.routes_page = UrbanRoutesPage(self.driver)
         self.routes_page.click_order_a_taxi_button()

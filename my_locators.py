@@ -30,7 +30,7 @@ phone_number_button_text = (By.XPATH, "//div[text()='Número de teléfono']")
 phone_number_field = (By.XPATH, "//input[@placeholder='+1 xxx xxx xx xx']")
 phone_number_field_second = (By.XPATH, "//input[@placeholder='+1 xxx xxx xx xx']")
 next_button = (By.XPATH, "//*[text()='Siguiente']")
-next_button_type = (By.CSS_SELECTOR, "button.button.full") ####################
+next_button_type = (By.CSS_SELECTOR, "button.button.full")
 sms_code_field = (By.XPATH, "//*[@placeholder='xxxx']")
 sms_code_field_second = (By.CSS_SELECTOR, "input[placeholder='xxxx']")
 sms_code_label_field = (By.CSS_SELECTOR, "label[for='code']")
